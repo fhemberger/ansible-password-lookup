@@ -1,0 +1,7 @@
+galaxy_info:
+  role_name: password-lookup
+  author: Frederic Hemberger
+  description: Patched Ansible 'password' lookup, which handles `ansible-vault` content correctly
+  license: license (GPLv3)
+  min_ansible_version: 2.9
+  galaxy_tags: ['password', 'lookup']
