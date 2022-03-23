@@ -37,6 +37,6 @@ def _read_password_file(b_path):
         self = inspect.currentframe().f_back.f_locals['self']
         content = to_text(self._loader._get_file_contents(b_path)[0], errors='surrogate_or_strict')
 
-    return content
+    return content.rstrip()
 
 LookupModule = password.LookupModule
