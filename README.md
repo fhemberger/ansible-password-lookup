@@ -1,6 +1,6 @@
 # Ansible Module: Password Lookup
 
-This is a **patched version** of the original Ansible [password lookup](https://docs.ansible.com/ansible/latest/plugins/lookup/password.html), to make sure password files encrypted with `ansible-vault` are decrypted properly.
+This is a **patch** for the original Ansible [password lookup](https://docs.ansible.com/ansible/latest/plugins/lookup/password.html), to make sure password files encrypted with `ansible-vault` are decrypted properly.
 
 It uses Ansible's internal method `_get_file_contents`, just like the `file` lookup plugin:
 
@@ -26,7 +26,7 @@ This causes all kinds of trouble when you use the password plugin to create rand
 
 ## Usage
 
-Copy the `lookup_plugins` directory to the root of your Ansible project, it will automatically use the patched version instead of the default lookup plugin.
+Copy the `lookup_plugins` directory to the root of your Ansible project and execute `patch.sh` inside of it. This will download the latest version of the original `password.py` lookup plugin and apply the patch.
 
 
 ## License
